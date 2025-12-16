@@ -31,3 +31,5 @@ jobs:
         run: npm install
       - name: Check styles
         run: npm run eslint
+      - name: e2e playwright test
+        run: npm run playwright
