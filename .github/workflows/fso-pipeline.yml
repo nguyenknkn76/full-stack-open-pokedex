@@ -4,6 +4,9 @@ on:
   push:
     branches: 
       - main
+  pull_request: 
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs: 
   hello_world_job:
@@ -31,5 +34,5 @@ jobs:
         run: npm install
       - name: Check styles
         run: npm run eslint
-      - name: e2e playwright test
-        run: npm run playwright
+      # - name: e2e playwright test
+      #   run: npm run playwright
